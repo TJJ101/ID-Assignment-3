@@ -3,7 +3,7 @@ Interactive Development Assignment 3
 ---------
 Url: https://tjj101.github.io/ID-Assignment-3/
 --------------
-Project Name: Calisthenics Store 2.0
+Project Name: Gamer Test
 ----------------------------------------------------------------------------
 
 Design Process:
