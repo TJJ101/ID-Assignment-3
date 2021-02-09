@@ -1,0 +1,16 @@
+#startbtn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    opacity: 70%;
+    width: fit-content;
+    text-decoration: none;
+}
+#startbtn:hover {
+    cursor: pointer;
+    background-color: deeppink;
+    opacity: 100%;
+}
