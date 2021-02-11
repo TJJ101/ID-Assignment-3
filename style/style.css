@@ -1,0 +1,54 @@
+#startbtn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    opacity: 70%;
+    width: fit-content;
+    text-decoration: none;
+}
+#startbtn:hover {
+    cursor: pointer;
+    background-color: deeppink;
+    opacity: 100%;
+}
+
+.introForm{  
+    background-color: rgb(206, 206, 206);
+    border-radius:0px;
+    width: 80%;
+    position:relative;
+    margin: 0 auto;
+}
+
+.introForm h1{
+    background-color: green;
+    margin:30 auto;
+}
+
+.introForm p{
+    width: 70%;
+    margin:0 auto;
+    font-size: 30px;
+}
+
+.testForm{  
+    background-color: rgb(206, 206, 206);
+    border-radius:0px;
+    width: 80%;
+    position:relative;
+    margin: 0 auto;
+}
+
+.testForm h1{
+    background-color: green;
+    margin:30 auto;
+}
+
+.testForm p{
+    width: 87.1%;
+    margin:0 auto;
+    font-size: 30px;
+}
