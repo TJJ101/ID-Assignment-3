@@ -1,4 +1,25 @@
-function setup(){
+var NumCircles = 50;
+var counter = 0;
+
+function start(){
+    setTimer (push,1000);
+}
+
+function push(){
+    pushCircles(15,Randomizer.nextColor(),Randomizer.nextInt(0,getWidth()),Randomizer.nextInt(0,getHeight()));
+    counter++;
+    if(counter == NumCircles){
+        stopTimer(push);
+    }
+}
+function pushCircles(radius,color,x,y){
+    var circle = new circle(radius);
+    circle.setColor(color);
+    circle.setPosition(x,y);
+    add(circle);
+}
+//code try 1 below
+/*function setup(){
     var circles = [],
         circle = {},
         overlapping = false,
@@ -41,7 +62,8 @@ function setup(){
             circles[i],r*2,circles[i].r*2);
     }
 }
-//example below
+*/
+//code example below
 /*
 // follows this tutorial:
 // https://www.youtube.com/watch?v=XATr_jdh-44
