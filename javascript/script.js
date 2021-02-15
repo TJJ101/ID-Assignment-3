@@ -19,6 +19,7 @@ function pushCircles(radius,color,x,y){
     add(circle);
 }
 //code try 1 below
+//https://www.youtube.com/watch?v=9btuFwPOEbY
 /*function setup(){
     var circles = [],
         circle = {},
