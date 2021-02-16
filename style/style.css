@@ -16,7 +16,6 @@
 
 .introForm{  
     background-color: rgb(206, 206, 206);
-    border-radius:0px;
     width: 80%;
     position:relative;
     margin: 0 auto;
@@ -35,7 +34,6 @@
 
 .testForm{  
     background-color: rgb(206, 206, 206);
-    border-radius:0px;
     width: 80%;
     position:relative;
     margin: 0 auto;
@@ -55,4 +53,49 @@
 footer p{
     font-size: 30px;
     color: red;
+}
+
+#circle{
+    /*border-radius: 50%;*/
+    display: none;
+    position:relative;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    color:red;
+    width: 50px;
+    height: 50px;
+    left:100px;
+    top:100px;
+}
+
+#circle:hover{
+    cursor: pointer;
+    background-color: grey;
+    opacity: 100%;
+}
+
+#start{
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: fit-content;
+    text-decoration: none;
+}
+#start:hover {
+    cursor: pointer;
+    background-color: deeppink;
+    opacity: 100%;
+}
+
+#box{
+    position: relative;
+    top:5%;
+    width: 1300px;
+    border:5px solid limegreen;
+    height: 800px;
+    margin:0 auto;
 }
