@@ -20,6 +20,7 @@ function Start(){
     setTimeout(function(){Random()},4050);
 }
 
+//we need a timer in html
 var count = 0;
 var clearTime;
 var seconds = 0, minutes = 0, hours = 0;
@@ -54,8 +55,32 @@ function startTime(){
     }
 }
 window.addEventListener('load',function(){
+    //when the first circle pops out the timer starts
     var start = document.getElementById("start");
     start.addEventListener('click',startTime);
+});
+
+function stopTime(){
+    if( seconds!== 0 || minutes!== 0 || hours !==0)
+    {
+        var fulltime = document.getElementById("fulltime"); //we need a timer in html
+        fulltime.style.display = "block";
+        var time = gethours + mins + secs;
+        fulltime.innerHTML = 'Fulltime: ' + time;
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
+        secs = '0' + seconds;
+        mins = '0' + minutes + ': ';
+        gethours = '0' + hours + ': ';
+        var x =document.getElementById("timer");
+        var stopTime = gethours + mins + secs;
+        x.innerHTML = stopTime;
+        clearTimeout(clearTime);
+    }
+}
+window.addEventListener('load',function(){
+    //when the last circle is clicked timer will stop
 });
 //var clear; function stopWatch( ) {
     //javascript statement here clear = setTimeout( "stopWatch( )", 1000 ); 
