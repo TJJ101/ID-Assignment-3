@@ -1,7 +1,7 @@
 function Random(){ 
     var x = document.getElementById("circle");   //randomize position of circle
-    var boxW = document.getElementById("box").clientWidth-50;
-    var boxH = document.getElementById("box").clientHeight-50;
+    var boxW = document.getElementById("box").clientWidth-100;
+    var boxH = document.getElementById("box").clientHeight-100;
     var l = Math.floor(Math.random()*boxW);
     var t = Math.floor(Math.random()*boxH);
     x.style.display="block"

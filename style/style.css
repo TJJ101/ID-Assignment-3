@@ -102,3 +102,33 @@ footer p{
     margin: 0 auto;
     padding: 10px;
 }
+
+#stopwatch{
+    width:40%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    padding: 5px;
+}
+
+#timer, #fulltime{
+    width: auto;
+    height:auto;
+    padding:10px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    border: 1px;
+    text-align: center;
+    box-shadow: 0 0 5px #ccc;
+    background: #fbfbf0;
+    color:darkblue;
+    border-bottom: 4px solid darkgrey;
+}
+
+#fulltime{
+    font-size: 16px;
+    font-weight: bold;
+    display: none;
+}
