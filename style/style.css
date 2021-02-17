@@ -54,7 +54,9 @@ footer p{
     font-size: 30px;
     color: red;
 }
-
+.description{
+    text-align: center;
+}
 #circle{
     /*border-radius: 50%;*/
     display: none;
@@ -72,7 +74,6 @@ footer p{
 #circle:hover{
     cursor: pointer;
     background-color: grey;
-    opacity: 100%;
 }
 
 #start{
@@ -84,11 +85,12 @@ footer p{
     padding: 15px;
     width: fit-content;
     text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #start:hover {
     cursor: pointer;
     background-color: deeppink;
-    opacity: 100%;
 }
 
 #box{
@@ -97,5 +99,6 @@ footer p{
     width: 1300px;
     border:5px solid limegreen;
     height: 800px;
-    margin:0 auto;
+    margin: 0 auto;
+    padding: 10px;
 }
