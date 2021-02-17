@@ -1,3 +1,4 @@
+/* Button styling */
 #startbtn {
     display: inline-block;
     background-color: #333;
@@ -14,11 +15,13 @@
     opacity: 100%;
 }
 
+/* Style for box in the index */
 .introForm{  
     background-color: rgb(206, 206, 206);
     width: 80%;
     position:relative;
     margin: 0 auto;
+    text-align: center;
 }
 
 .introForm h1{
@@ -27,36 +30,25 @@
 }
 
 .introForm p{
-    width: 70%;
-    margin:0 auto;
-    font-size: 30px;
-}
-
-.testForm{  
-    background-color: rgb(206, 206, 206);
-    width: 80%;
-    position:relative;
     margin: 0 auto;
+    font-size: 29px;
 }
 
-.testForm h1{
-    background-color: green;
-    margin:30 auto;
-}
+/*-----------------------------------------------------------------------------------*/
 
-.testForm p{
-    width: 87.1%;
-    margin:0 auto;
-    font-size: 30px;
-}
-
+/*Styling for p tag in footer tag */
 footer p{
-    font-size: 30px;
+    text-align: center;
+    font-size: 15px;
     color: red;
 }
-.description{
-    text-align: center;
+.headtext{
+    padding: 10px;
 }
+
+/*-----------------------------------------------------------------------------------*/
+
+/*Style for the circle that pops up on the reaction test */
 #circle{
     /*border-radius: 50%;*/
     display: none;
@@ -67,16 +59,31 @@ footer p{
     color:red;
     width: 50px;
     height: 50px;
-    left:100px;
-    top:100px;
+    left: 0px;
+    top: 00px;
 }
-
 #circle:hover{
     cursor: pointer;
     background-color: grey;
 }
 
-#start{
+/* Button styling */
+#startbtn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: fit-content;
+    text-decoration: none;
+}
+#startbtn:hover {
+    cursor: pointer;
+    background-color: deeppink;
+    opacity: 100%;
+}
+#begin{
     display: inline-block;
     background-color: #333;
     color: white;
@@ -88,11 +95,14 @@ footer p{
     padding-left: 20px;
     padding-right: 20px;
 }
-#start:hover {
+#begin:hover {
     cursor: pointer;
     background-color: deeppink;
 }
 
+/*-----------------------------------------------------------------------------------*/
+
+/* styling for the box that appears on the reaction test page */
 #box{
     position: relative;
     top:5%;
@@ -101,8 +111,12 @@ footer p{
     height: 800px;
     margin: 0 auto;
     padding: 10px;
+    text-align: center;
 }
 
+/*-----------------------------------------------------------------------------------*/
+
+/* styling for the timer on the reaction test page */
 #stopwatch{
     width:40%;
     margin: 0 auto;
@@ -131,4 +145,9 @@ footer p{
     font-size: 16px;
     font-weight: bold;
     display: none;
+}
+
+.description{
+    padding: 10px;
+    font-size: 20px;
 }

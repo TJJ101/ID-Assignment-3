@@ -11,7 +11,7 @@ function Random(){
 }
 
 function Start(){
-    var x = document.getElementById("start");
+    var x = document.getElementById("begin");
     x.innerHTML="3";
     setTimeout(function(){x.innerHTML="2"},1000);
     setTimeout(function(){x.innerHTML="1"},2000);
@@ -56,7 +56,7 @@ function startTime(){
 }
 window.addEventListener('load',function(){
     //when the first circle pops out the timer starts
-    var start = document.getElementById("start");
+    var start = document.getElementById("begin");
     start.addEventListener('click',startTime);
 });
 
