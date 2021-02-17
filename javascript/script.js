@@ -20,6 +20,52 @@ function Start(){
     setTimeout(function(){Random()},4050);
 }
 
+var count = 0;
+var clearTime;
+var seconds = 0, minutes = 0, hours = 0;
+var clearState;
+var secs, mins, gethours ; 
+function startWatch(){
+    if( seconds === 60)
+    {
+        seconds = 0;
+        minutes = minutes + 1;
+    }
+    /*js tenary operator*/mins = (minutes <10) ? ('0'+ minutes + ': ') : (minutes + ': ');
+    if( minutes === 60 )
+    {
+        minutes = 0;
+        hours = hours + 1;
+    }
+    gethours = ( hours < 10) ? ('0' + hours + ': ') : (hours + ': '); secs = (seconds < 10) ? ('0' + seconds) : (seconds);
+    var x = document.getElementById("timer");
+    x.innerHTML = 'Time: ' + gethours + mins + secs;
+    seconds++
+    clearTime = setTimeout("startWatch()",1000);
+}
+startWatch()
+
+function startTime(){
+    if ( seconds === 0 && minutes === 0 && hours ===0)
+    {
+        var fulltime = document.getElementById("fulltime");
+        fulltime.style.display = "none";
+        startWatch();
+    }
+}
+window.addEventListener('load',function(){
+    var start = document.getElementById("start");
+    start.addEventListener('click',startTime);
+});
+//var clear; function stopWatch( ) {
+    //javascript statement here clear = setTimeout( "stopWatch( )", 1000 ); 
+    //} Or 
+    //function stopWatch( ) {
+    // javascript statement here clear = setTimeout( function ( ) { 
+    // javascript statement here }, 1000 ); } 
+    // Or 
+    //var stopWatch = function ( ) { 
+    // javascript statement here clear = setTimeout( "stopWatch( )", 1000 ); } 
 
 
 /*var NumCircles = 50;
