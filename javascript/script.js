@@ -58,6 +58,9 @@ function startWatch(){
     seconds++
     clearTime = setTimeout("startWatch()",1000);
     Stop();
+    /*if(minutes === 1){   //put this code here for now, need to edit it later
+        clearTimeout(clearTime);
+    }*/
 }
 
 //This caused the timer to start immediately which isnt good
@@ -97,6 +100,8 @@ function stopTime(){
         var stopTime = gethours + mins + secs;
         x.innerHTML = stopTime;
         clearTimeout(clearTime);
+        //this code doesnt work
+        //main reason is that clearTime is a variable in another function
     }
 }
 
