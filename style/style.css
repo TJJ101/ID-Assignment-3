@@ -1,20 +1,3 @@
-/* Button styling */
-#startbtn {
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    width: fit-content;
-    text-decoration: none;
-}
-#startbtn:hover {
-    cursor: pointer;
-    background-color: deeppink;
-    opacity: 100%;
-}
-
 /* Style for box in the index */
 .introForm{  
     background-color: rgb(206, 206, 206);
@@ -23,15 +6,9 @@
     margin: 0 auto;
     text-align: center;
 }
-
-.introForm h1{
-    background-color: green;
-    margin:30 auto;
-}
-
 .introForm p{
     margin: 0 auto;
-    font-size: 29px;
+    font-size: 25px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -44,6 +21,9 @@ footer p{
 }
 .headtext{
     padding: 10px;
+    background-color: green;
+    margin:30 auto;
+    color: black;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -53,10 +33,9 @@ footer p{
     /*border-radius: 50%;*/
     display: none;
     position:relative;
-    background-color: #333;
+    background-color: red;
     border: none;
     border-radius: 50%;
-    color:red;
     width: 50px;
     height: 50px;
     left: 0px;
@@ -64,7 +43,6 @@ footer p{
 }
 #circle:hover{
     cursor: pointer;
-    background-color: grey;
 }
 
 /* Button styling */
@@ -81,7 +59,6 @@ footer p{
 #startbtn:hover {
     cursor: pointer;
     background-color: deeppink;
-    opacity: 100%;
 }
 #begin{
     display: inline-block;
@@ -97,9 +74,56 @@ footer p{
 }
 #begin:hover {
     cursor: pointer;
+    background-color: rgb(116, 116, 116);
+}
+#resultbtn{
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: fit-content;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#resultbtn:hover {
+    cursor: pointer;
     background-color: deeppink;
 }
-
+#reset{
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: fit-content;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#reset:hover {
+    cursor: pointer;
+    background-color: deeppink;
+}
+#addLeaderboard{
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: fit-content;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#addLeaderboard:hover {
+    cursor: pointer;
+    background-color: deeppink;
+}
 /*-----------------------------------------------------------------------------------*/
 
 /* styling for the box that appears on the reaction test page */
@@ -117,7 +141,7 @@ footer p{
 
 /* styling for the timer on the reaction test page */
 #stopwatch{
-    width:40%;
+    width: 50%;
     margin: 0 auto;
     position: relative;
     text-align: center;
@@ -146,7 +170,41 @@ footer p{
     display: none;
 }
 
-#description{
-    padding: 10px;
+/* */
+.popupbg{
+    position: fixed;
+    z-index: 999999999;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0,0.4);
+    padding-top: 50px;
+}
+.popupcontainer{
+    padding-bottom: 15px;
+}
+.popupcontainer p {
     font-size: 20px;
+    padding: 5px;
+}
+.popupcontent{
+    background: rgb(240, 240, 240);
+    margin: 5% auto 15% auto;
+    border: 1px solid black;
+    width: 60%;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}  
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
 }

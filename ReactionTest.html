@@ -8,14 +8,46 @@
 <body>
     <div id="stopwatch">
         <p id="timer">Time: 00: 00: 00</p>
-        <p if="fulltime"></p>
     </div>
     <div id = "box">
-        <div id="description">
-            After you click Start, circles will start appearing on the screen
-            and you have to click them as fast as possible for 1 minute.
+        <div id="popup" class="popupbg">
+            <div class="popupcontent animate">
+                <div class="popupcontainer">
+                    <h1 class="headtext">
+                        <u>INSTRUCTIONS:</u>
+                    </h1>
+                    <p>
+                        A red circle will appear within the green box.<br>
+                        Click it as fast as possible.<br>
+                        Test will end after 10 circles have been clicked on. <br>
+                        Click on Begin below in order to start. <br>
+                    </p>
+                    <button id="begin" onclick="Start()">BEGIN</button>
+                </div>
+            </div>
         </div>
-        <button id="begin" onclick="Start()">BEGIN</button>
+        <div id="popup2" class="popupbg" style="display: none;">
+            <div class="popupcontent animate">
+                <div class="popupcontainer" id="result1">
+                    <h1>
+                        <u>END OF TEST</u>
+                    </h1>
+                    <p>
+                        You have finished the reaction speed test.
+                    </p>
+                    <button id="resultbtn" onclick="DisplayResult()">SHOW RESULT</button>
+                </div>
+                <!---->
+                <div class="popupcontainer" id="result2" style="display: none;">
+                    <p id="totalTime"></p><br>
+                    <p id="averageTime"></p><br>
+                    <p id="fastestTime"></p><br>
+                    <p id="slowestTime"></p><br>
+                    <button id="addLeaderboard" onclick="">Add to Leaderboard</button>
+                    <button id="reset" onclick="Reset()">Retry Test</button>
+                </div>
+            </div>
+        </div>
         <button id="circle" onclick="Random()"></button>
     </div>
 <script src="./javascript/script.js"></script>
