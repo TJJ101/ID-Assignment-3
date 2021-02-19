@@ -115,6 +115,7 @@ function DisplayResult(){
 
 $(document).ready(function () {
     const APIKEY= "602f4fbe5ad3610fb5bb638b";
+    getResults();
     $("#addLeaderboard").on("click", function (e) {
         console.log("hihi")
         e.preventDefault();
@@ -154,40 +155,34 @@ $(document).ready(function () {
         document.getElementById("popup3").style.display = "block";
         document.getElementById("leaderboard").style.display = "block";
     })
+
+    function getResults(limit=5, all = true){
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://a3leaderboard-cdd2.restdb.io/rest/results",
+            "method": "GET",
+            "headers": {
+              "content-type": "application/json",
+              "x-apikey": APIKEY,
+              "cache-control": "no-cache"
+            },
+        }
+    
+        $.ajax(settings).done(function(response){
+            let content = "";
+            for (var i = 0; i < response.length && i < limit; i++){
+                content = `
+                <rp>${response[i].totalTime}</rp>
+                <rp>${response[i].averageTime}</rp>`;
+            }
+            $("#leaderboard p").innerHTML(content);
+            console.log(content);
+        })
+    }
 });
 
-function getResults(limit=5, all = true){
-    var f1= document.getElementById("no1");
-    var f2= document.getElementById("no2");
-    var f3= document.getElementById("no3");
-    var f4= document.getElementById("no4");
-    var f5= document.getElementById("no5");
-    let settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://a3leaderboard-cdd2.restdb.io/rest/results",
-        "method": "GET",
-        "headers": {
-          "content-type": "application/json",
-          "x-apikey": APIKEY,
-          "cache-control": "no-cache"
-        },
-    }
 
-    $.ajax(settings).done(function(response){
-        let content = "";
-        for (var i = 0; i < response.length && i < limit; i++){
-            content = `
-            <rp>${response[i].totalTime}</rp>
-            <rp>${response[i].averageTime}</rp>`;
-        }
-        $("#leaderboard p").innerHTML(content);
-        console.log(content);
-    })
-    document.getElementById("popup2").style.display = "hide";
-    document.getElementById("popup3").style.display = "block";
-    document.getElementById("leaderboard").style.display = "block";
-}
 
 
 
