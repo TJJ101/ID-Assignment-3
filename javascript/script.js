@@ -120,19 +120,62 @@ function DisplayResult(){
     st.innerHTML = "Slowest Time Taken: " + slowestTime.toFixed(2) + "&nbsp;seconds";
 };
 
+$("#addLeaderboard").click(function(){
+    document.getElementById("popup3").style.display = "none";
+    document.getElementById("popup4").style.display = "block";
+});
+
 $(document).ready(function () {
     const APIKEY= "602f4fbe5ad3610fb5bb638b";
     getResults();
     $("#showLeaderboard").on("click", function (e) {
+        document.getElementById("popup2").style.display = "none";
         console.log("hihi")
         e.preventDefault();
-        //let uName = 
         let totalTime = $("#totalTime").val();
         let averageTime = $("#averageTime").val();
         let fastestTime = $("#fastestTime").val();
         let slowestTime = $("#slowestTime").val();
         let jsondata = {
             //"Name": uName,
+            "totalTime": totalTime,
+            "averageTime": averageTime,
+            "fastestTime": fastestTime,
+            "slowestTime": slowestTime
+        };
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://a3leaderboard-cdd2.restdb.io/rest/results",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json",
+                "x-apikey": APIKEY,
+                "cache-control": "no-cache"
+            },
+            "processData": false,
+            "data": JSON.stringify(jsondata)
+        }
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $("#showLeaderboard").prop("disabled", false);
+            getResults();
+        });
+        document.getElementById("popup3").style.display = "block";
+        document.getElementById("leaderboard").style.display = "block";
+    });
+    $("#updateLeaderboard").on("click", function (e) {
+        document.getElementById("#popup4").style.display = "none";
+        document.getElementById("popup5").style.display = "block";
+        console.log("test test")
+        e.preventDefault();
+        let uname = $('username').val()
+        let totalTime = $("#totalTime").val();
+        let averageTime = $("#averageTime").val();
+        let fastestTime = $("#fastestTime").val();
+        let slowestTime = $("#slowestTime").val();
+        let jsondata = {
+            "Name": uname,
             "totalTime": totalTime,
             "averageTime": averageTime,
             "fastestTime": fastestTime,

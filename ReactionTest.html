@@ -26,6 +26,7 @@
                 </div>
             </div>
         </div>
+        <button id="circle" onclick="Random()"></button>
         <div id="popup2" class="popupbg" style="display: none;">
             <div class="popupcontent animate">
                 <div class="popupcontainer" id="result1">
@@ -56,7 +57,7 @@
                     </h1>
                     <br>
                     <p></p>
-                    <button onclick="" id="addLeaderboard" class="btn">Add to Leaderboard</button>
+                    <button id="addLeaderboard" class="btn">Add to Leaderboard</button>
                     <a href="./index.html" id="backtoHome" >Home</a>
                 </div>
             </div>
@@ -68,16 +69,27 @@
                         <u>Add to Leaderboard</u>
                     </h1>
                     <br>
-                    <label for="uname">Enter Name: </label>
+                    <label for="username">Enter Name: </label>
                     <input type="text" id="username" required>
-
-                    <input type="submit" value="send" id="submit">
-                    <button onclick="" id="addLeaderboard" class="btn">Add to Leaderboard</button>
-                    <a href="./index.html" id="backtoHome" >Home</a>
+                    <br><br>
+                    <input type="submit" id="updateLeaderboard" class="btn">
+                    <a href="./index.html" id="backtoHome" class="btn">Home</a>
+                    <br>
                 </div>
             </div>
         </div>
-        <button id="circle" onclick="Random()"></button>
+        <div id="popup5" class="popupbg" style="display: none;">
+            <div class ="popupcontent animate">
+                <form class="popupcontainer" id="addToLeaderboard">
+                    <h1>
+                        <u>Successfully Added</u>
+                    </h1>
+                    <br>
+                    <button id="reset" class="btn" onclick="Reset()">Retry Test</button>
+                    <a href="./index.html" id="backtoHome" class="btn">Home</a>
+                </div>
+            </div>
+        </div>
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./javascript/script.js" ></script>
