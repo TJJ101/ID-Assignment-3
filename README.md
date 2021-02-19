@@ -51,10 +51,6 @@ Content Credit:
 
 References:
 ---------------------------------------------------------------------------------
-
-➡ Bootstrap: https://getbootstrap.com/
-Utilized a decent ammount of bootstrap like Navbar, flexbox here and there.
-
 ➡ APM Test : https://www.arealme.com/apm-actions-per-minute-test/en/
 Referred to this websites test ideas and their designs.
 
