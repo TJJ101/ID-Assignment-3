@@ -1,3 +1,4 @@
+//Global Variables
 var count = 0;
 var clearTime;
 var seconds = 0, minutes = 0, hours = 0;
@@ -9,6 +10,7 @@ var fastestTime =0;
 var slowestTime = 0;
 var lastTime = 0;
 
+//Function that starts when the user clicks on the begin button. Sets everything into motion    
 function Start(){
     var x = document.getElementById("begin");
     var popup = document.getElementById("popup");
@@ -42,7 +44,10 @@ function Random(){
         console.log(reactionTime);
         totalTime += reactionTime;
         console.log(totalTime);
-        if(reactionTime > slowestTime){
+        if(slowestTime == 0){
+            slowestTime = reactionTime - 3;
+        }
+        else if(reactionTime > slowestTime){
             slowestTime = reactionTime;
             console.log(slowestTime);
         }
@@ -116,19 +121,21 @@ function DisplayResult(){
 $(document).ready(function () {
     const APIKEY= "602f4fbe5ad3610fb5bb638b";
     getResults();
-    $("#addLeaderboard").on("click", function (e) {
+    $("#showLeaderboard").on("click", function (e) {
         console.log("hihi")
         e.preventDefault();
+        //let uName = 
         let totalTime = $("#totalTime").val();
         let averageTime = $("#averageTime").val();
         let fastestTime = $("#fastestTime").val();
         let slowestTime = $("#slowestTime").val();
     
         let jsondata = {
-          "totalTime": totalTime,
-          "averageTime": averageTime,
-          "fastestTime": fastestTime,
-          "slowestTime": slowestTime
+            //"Name": uName,
+            "totalTime": totalTime,
+            "averageTime": averageTime,
+            "fastestTime": fastestTime,
+            "slowestTime": slowestTime
         };
         let settings = {
             "async": true,
@@ -143,12 +150,12 @@ $(document).ready(function () {
             "processData": false,
             "data": JSON.stringify(jsondata),
             "beforeSend": function () {
-                $("#addLeaderboard").prop("disabled",true);
+                $("#showLeaderboard").prop("disabled",true);
             }
         }
         $.ajax(settings).done(function (response) {
             console.log(response);
-            $("#addLeaderboard").prop("disabled", false);
+            $("#showLeaderboard").prop("disabled", false);
             getResults();
         });
         document.getElementById("popup2").style.display = "hide";

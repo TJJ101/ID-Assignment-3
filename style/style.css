@@ -109,7 +109,7 @@ footer p{
     cursor: pointer;
     background-color: deeppink;
 }
-#addLeaderboard{
+#showLeaderboard{
     display: inline-block;
     background-color: #333;
     color: white;
@@ -124,7 +124,7 @@ footer p{
 }
     
 
-#addLeaderboard:hover {
+#showLeaderboard:hover {
     cursor: pointer;
     background-color: deeppink;
 }
