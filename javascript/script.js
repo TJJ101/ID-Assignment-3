@@ -129,7 +129,6 @@ $(document).ready(function () {
         let averageTime = $("#averageTime").val();
         let fastestTime = $("#fastestTime").val();
         let slowestTime = $("#slowestTime").val();
-    
         let jsondata = {
             //"Name": uName,
             "totalTime": totalTime,
@@ -167,7 +166,7 @@ $(document).ready(function () {
         let settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://a3leaderboard-cdd2.restdb.io/rest/results",
+            "url": `https://a3leaderboard-cdd2.restdb.io/rest/results`,
             "method": "GET",
             "headers": {
               "content-type": "application/json",
@@ -175,7 +174,6 @@ $(document).ready(function () {
               "cache-control": "no-cache"
             },
         }
-    
         $.ajax(settings).done(function(response){
             let content = "";
             for (var i = 0; i < response.length && i < limit; i++){
@@ -183,7 +181,7 @@ $(document).ready(function () {
                 <rp>${response[i].totalTime}</rp>
                 <rp>${response[i].averageTime}</rp>`;
             }
-            $("#leaderboard p").innerHTML(content);
+            $("#leaderboard p").html(content);
             console.log(content);
         })
     }
