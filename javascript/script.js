@@ -133,7 +133,7 @@ $(document).ready(function () {
         let settings = {
             "async": true,
             "crossDomain": true,
-            "url": 'https://a3leaderboard-cdd2.restdb.io/rest/results',
+            "url": "https://a3leaderboard-cdd2.restdb.io/rest/results",
             "method": "POST",
             "headers": {
                 "content-type": "application/json",
@@ -183,13 +183,3 @@ $(document).ready(function () {
 });
 
 
-
-
-
-
-
-/*
-window.addEventListener('load',function(){
-    //when the last circle is clicked timer will stop
-});
-*/
