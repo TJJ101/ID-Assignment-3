@@ -137,7 +137,6 @@ $(document).ready(function () {
         let fastestTime = $("#fastestTime").val();
         let slowestTime = $("#slowestTime").val();
         let jsondata = {
-            //"Name": uName,
             "totalTime": totalTime,
             "averageTime": averageTime,
             "fastestTime": fastestTime,
@@ -162,10 +161,9 @@ $(document).ready(function () {
             getResults();
         });
         document.getElementById("popup3").style.display = "block";
-        document.getElementById("leaderboard").style.display = "block";
     });
     $("#updateLeaderboard").on("click", function (e) {
-        document.getElementById("#popup4").style.display = "none";
+        document.getElementById("popup4").style.display = "none";
         document.getElementById("popup5").style.display = "block";
         console.log("test test")
         e.preventDefault();
