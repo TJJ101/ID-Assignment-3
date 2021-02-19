@@ -111,24 +111,13 @@ function DisplayResult(){
     at.innerHTML = "Average Time Taken: " + ((totalTime-3)/10).toFixed(2) + "&nbsp;seconds";
     ft.innerHTML = "Fastest Time Taken: " + fastestTime.toFixed(2) + "&nbsp;seconds";
     st.innerHTML = "Slowest Time Taken: " + slowestTime.toFixed(2) + "&nbsp;seconds";
-} 
-
-function DisplayLeaderboard(){
-    var x = document.getElementById("popup3");
-    var f1 = document.getElementById("no1");
-    var f2 = document.getElementById("no2");
-    var f3 = document.getElementById("no3");
-    var f4 = document.getElementById("no4");
-    var f5 = document.getElementById("no5");
-    x.style.display = "block";
-
-}
+};
 
 $(document).ready(function () {
     const APIKEY= "602f4fbe5ad3610fb5bb638b";
-    $("addLeaderboard").on("click", function (e) {
+    $("#addLeaderboard").on("click", function (e) {
+        console.log("hihi")
         e.preventDefault();
-    
         let totalTime = $("#totalTime").val();
         let averageTime = $("#averageTime").val();
         let fastestTime = $("#fastestTime").val();
@@ -161,6 +150,9 @@ $(document).ready(function () {
             $("#addLeaderboard").prop("disabled", false);
             getResults();
         });
+        document.getElementById("popup2").style.display = "hide";
+        document.getElementById("popup3").style.display = "block";
+        document.getElementById("leaderboard").style.display = "block";
     })
 });
 
@@ -192,6 +184,9 @@ function getResults(limit=5, all = true){
         $("#leaderboard p").innerHTML(content);
         console.log(content);
     })
+    document.getElementById("popup2").style.display = "hide";
+    document.getElementById("popup3").style.display = "block";
+    document.getElementById("leaderboard").style.display = "block";
 }
 
 

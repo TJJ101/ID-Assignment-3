@@ -103,6 +103,7 @@ footer p{
     text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 13px;
 }
 #reset:hover {
     cursor: pointer;
@@ -119,8 +120,29 @@ footer p{
     text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
+    font-size:13px;
 }
+    
+
 #addLeaderboard:hover {
+    cursor: pointer;
+    background-color: deeppink;
+}
+
+#backtoHome{
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: fit-content;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size:15px;
+}
+#backtoHome:hover {
     cursor: pointer;
     background-color: deeppink;
 }
