@@ -100,6 +100,8 @@ function Reset(){
     lastTime = 0;
     document.getElementById("popup2").style.display = "none";
     document.getElementById("popup").style.display = "block";
+    document.getElementById("popup3").style.display = "none";
+    document.getElementById("leaderboard").style.display = "none";
     document.getElementById("timer").innerHTML = "Time: 00: 00: 00";
     document.getElementById("begin").innerHTML = "BEGIN";
 
@@ -147,10 +149,7 @@ $(document).ready(function () {
                 "cache-control": "no-cache"
             },
             "processData": false,
-            "data": JSON.stringify(jsondata),
-            "beforeSend": function () {
-                $("#showLeaderboard").prop("disabled",true);
-            }
+            "data": JSON.stringify(jsondata)
         }
         $.ajax(settings).done(function (response) {
             console.log(response);
