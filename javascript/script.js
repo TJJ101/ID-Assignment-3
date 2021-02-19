@@ -176,10 +176,11 @@ $(document).ready(function () {
         }
         $.ajax(settings).done(function(response){
             let content = "";
+            console.log(response);
             for (var i = 0; i < response.length && i < limit; i++){
                 content = `
-                <rp>${response[i].totalTime}</rp>
-                <rp>${response[i].averageTime}</rp>`;
+                <rp>${response[i].TotalTimeTaken}</rp>
+                <rp>${response[i].AverageTimeTaken}</rp>`;
             }
             $("#leaderboard p").html(content);
             console.log(content);
