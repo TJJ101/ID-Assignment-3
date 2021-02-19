@@ -112,6 +112,92 @@ function DisplayResult(){
     ft.innerHTML = "Fastest Time Taken: " + fastestTime.toFixed(2) + "&nbsp;seconds";
     st.innerHTML = "Slowest Time Taken: " + slowestTime.toFixed(2) + "&nbsp;seconds";
 } 
+
+function DisplayLeaderboard(){
+    var x = document.getElementById("popup3");
+    var f1 = document.getElementById("no1");
+    var f2 = document.getElementById("no2");
+    var f3 = document.getElementById("no3");
+    var f4 = document.getElementById("no4");
+    var f5 = document.getElementById("no5");
+    x.style.display = "block";
+
+}
+
+$(document).ready(function () {
+    const APIKEY= "602f4fbe5ad3610fb5bb638b";
+    $("addLeaderboard").on("click", function (e) {
+        e.preventDefault();
+    
+        let totalTime = $("#totalTime").val();
+        let averageTime = $("#averageTime").val();
+        let fastestTime = $("#fastestTime").val();
+        let slowestTime = $("#slowestTime").val();
+    
+        let jsondata = {
+          "totalTime": totalTime,
+          "averageTime": averageTime,
+          "fastestTime": fastestTime,
+          "slowestTime": slowestTime
+        };
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": 'https://a3leaderboard-cdd2.restdb.io/rest/results',
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json",
+                "x-apikey": APIKEY,
+                "cache-control": "no-cache"
+            },
+            "processData": false,
+            "data": JSON.stringify(jsondata),
+            "beforeSend": function () {
+                $("#addLeaderboard").prop("disabled",true);
+            }
+        }
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $("#addLeaderboard").prop("disabled", false);
+            getResults();
+        });
+    })
+});
+
+function getResults(limit=5, all = true){
+    var f1= document.getElementById("no1");
+    var f2= document.getElementById("no2");
+    var f3= document.getElementById("no3");
+    var f4= document.getElementById("no4");
+    var f5= document.getElementById("no5");
+    let settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://a3leaderboard-cdd2.restdb.io/rest/results",
+        "method": "GET",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": APIKEY,
+          "cache-control": "no-cache"
+        },
+    }
+
+    $.ajax(settings).done(function(response){
+        let content = "";
+        for (var i = 0; i < response.length && i < limit; i++){
+            content = `
+            <rp>${response[i].totalTime}</rp>
+            <rp>${response[i].averageTime}</rp>`;
+        }
+        $("#leaderboard p").innerHTML(content);
+        console.log(content);
+    })
+}
+
+
+
+
+
 /*
 window.addEventListener('load',function(){
     //when the last circle is clicked timer will stop
