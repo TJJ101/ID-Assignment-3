@@ -19,6 +19,8 @@ Existing Features:
 
 ➡ Timer in the test page
 
+➡ smooth user experience
+
 
 Features Left to Implement:
 -----------------------------------------------------------------------------
