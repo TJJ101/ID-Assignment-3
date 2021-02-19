@@ -165,7 +165,6 @@ $(document).ready(function () {
     $("#updateLeaderboard").on("click", function (e) {
         document.getElementById("popup4").style.display = "none";
         document.getElementById("popup5").style.display = "block";
-        console.log("test test")
         e.preventDefault();
         let uname = $('username').val()
         let totalTime = $("#totalTime").val();
