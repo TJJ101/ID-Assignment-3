@@ -160,13 +160,13 @@ $(document).ready(function () {
         document.getElementById("popup2").style.display = "hide";
         document.getElementById("popup3").style.display = "block";
         document.getElementById("leaderboard").style.display = "block";
-    })
+    });
 
     function getResults(limit=5, all = true){
         let settings = {
             "async": true,
             "crossDomain": true,
-            "url": `https://a3leaderboard-cdd2.restdb.io/rest/results`,
+            "url": "https://a3leaderboard-cdd2.restdb.io/rest/results",
             "method": "GET",
             "headers": {
               "content-type": "application/json",

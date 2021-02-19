@@ -22,7 +22,7 @@
                         Test will end after 10 circles have been clicked on. <br>
                         Click on Begin below in order to start. <br>
                     </p>
-                    <button id="begin" onclick="Start()">BEGIN</button>
+                    <button id="begin" class="btn" onclick="Start()">BEGIN</button>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                     <p>
                         You have finished the reaction speed test.
                     </p>
-                    <button id="resultbtn" onclick="DisplayResult()">SHOW RESULT</button>
+                    <button id="resultbtn" class="btn" onclick="DisplayResult()">SHOW RESULT</button>
                 </div>
                 <!---->
                 <div class="popupcontainer" id="result2" style="display: none;">
@@ -43,8 +43,8 @@
                     <p id="averageTime"></p><br>
                     <p id="fastestTime"></p><br>
                     <p id="slowestTime"></p><br>
-                    <input type="submit" id="showLeaderboard" value="Show Leaderboard">
-                    <button id="reset" onclick="Reset()">Retry Test</button>
+                    <input type="submit" class="btn" id="showLeaderboard" value="Show Leaderboard">
+                    <button id="reset" class="btn" onclick="Reset()">Retry Test</button>
                 </div>
             </div>
         </div>
@@ -56,8 +56,24 @@
                     </h1>
                     <br>
                     <p></p>
+                    <button onclick="" id="addLeaderboard" class="btn">Add to Leaderboard</button>
                     <a href="./index.html" id="backtoHome" >Home</a>
-                    <button id="reset" onclick="Reset()">Retry Test</button>
+                </div>
+            </div>
+        </div>
+        <div id="popup4" class="popupbg" style="display: none;">
+            <div class ="popupcontent animate">
+                <form class="popupcontainer" id="addToLeaderboard">
+                    <h1>
+                        <u>Add to Leaderboard</u>
+                    </h1>
+                    <br>
+                    <label for="uname">Enter Name: </label>
+                    <input type="text" id="username" required>
+
+                    <input type="submit" value="send" id="submit">
+                    <button onclick="" id="addLeaderboard" class="btn">Add to Leaderboard</button>
+                    <a href="./index.html" id="backtoHome" >Home</a>
                 </div>
             </div>
         </div>
@@ -65,4 +81,5 @@
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./javascript/script.js" ></script>
+
 </body>

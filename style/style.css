@@ -46,7 +46,7 @@ footer p{
 }
 
 /* Button styling */
-#startbtn {
+.btn{
     display: inline-block;
     background-color: #333;
     color: white;
@@ -56,95 +56,37 @@ footer p{
     width: fit-content;
     text-decoration: none;
 }
-#startbtn:hover {
+.btn:hover{
     cursor: pointer;
     background-color: deeppink;
 }
 #begin{
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    width: fit-content;
-    text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
 }
 #begin:hover {
-    cursor: pointer;
+    /*cursor: pointer;*/
     background-color: rgb(116, 116, 116);
 }
+
 #resultbtn{
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    width: fit-content;
-    text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
 }
-#resultbtn:hover {
-    cursor: pointer;
-    background-color: deeppink;
-}
 #reset{
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    width: fit-content;
-    text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 13px;
 }
-#reset:hover {
-    cursor: pointer;
-    background-color: deeppink;
-}
-#showLeaderboard{
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    width: fit-content;
-    text-decoration: none;
+#showLeaderboard, #addLeaderboard{
     padding-left: 20px;
     padding-right: 20px;
     font-size:13px;
 }
-    
-
-#showLeaderboard:hover {
-    cursor: pointer;
-    background-color: deeppink;
-}
-
 #backtoHome{
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    width: fit-content;
-    text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
     font-size:15px;
-}
-#backtoHome:hover {
-    cursor: pointer;
-    background-color: deeppink;
 }
 /*-----------------------------------------------------------------------------------*/
 
