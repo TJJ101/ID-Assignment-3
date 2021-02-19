@@ -7,7 +7,7 @@ Project Name: Gamer Test
 ----------------------------------------------------------------------------
 
 Design Process:
-We have referred to https://www.arealme.com/apm-actions-per-minute-test/en/ for our test ideas and the user interface and revise accordingly. We have also thought of using restDb.io to record user test data and print out the top 5 best result in the leaderboard page.
+We have referred to https://www.arealme.com/apm-actions-per-minute-test/en/ for our test ideas and the user interface and revise accordingly. We have also thought of using restDb.io to record user test data and print out the top 5 best result in the leaderboard page. We thought of implementing the create account and login function in the future to track players improvment record.
 -----------------------------------------------------------------------------
 
 Existing Features:
@@ -24,14 +24,14 @@ Features Left to Implement:
 -----------------------------------------------------------------------------
 ➡ Create Account and Login Function
 
-➡
+-Specific Calculations of User's ability level
 
 Testing:
 ------------------------------------------------------------------------------
 
-➡ 
+➡ The test went well but leaderboard still have errors
 
-➡
+➡ Overall experience of the website is great, but left with leaderboard to finish
 
 Acknowledgement:
 --------------------------------------------------------------------------------
